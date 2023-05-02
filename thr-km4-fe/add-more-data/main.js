@@ -1,3 +1,9 @@
 function addMoreData(object, key, value) {
-  // your code here
+   const exit = object.assign(object, { [key]: value });
+
+  return exit;
 }
+
+console.log(addMoreData({ name: "Edo", age: 20 }, "address", "Jakarta"));
+console.log(addMoreData({ name: "Edo", age: 20 }, "hobies", ["coding", "reading"]));
+console.log(addMoreData({ name: "Edo", age: 20 }, "isMarried", false));
